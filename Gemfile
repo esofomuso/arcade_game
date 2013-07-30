@@ -67,4 +67,5 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'spork'
+  gem 'simplecov', :require => false
 end

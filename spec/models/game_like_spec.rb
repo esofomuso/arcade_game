@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 # == Schema Information
 #
 # Table name: GameLikes
@@ -8,13 +10,12 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
-pending "working specs" do
 describe GameLike do
   describe "creation" do
     let(:game) { create(:arcade_game) }  
 
     let(:creation_attributes) {{
-      :game => game,
+      :game_id => game.id,
       :clicker_ip => Faker::PhoneNumber.phone_number
     }}
 
@@ -26,7 +27,7 @@ describe GameLike do
       end
 
       it "rejects an GameLike with no game" do
-        creation_attributes.delete :game
+        creation_attributes.delete :game_id
         expect(subject).not_to be_valid
       end
     end
@@ -36,13 +37,6 @@ describe GameLike do
         expect(subject.game).to eq game
         expect(game.game_likes).to include subject
       end
-      
-      it "is destroyed when the game is destroyed" do
-        subject
-        game.destroy
-        expect(subject).to have_been_destroyed
-      end
     end
   end
-end
 end

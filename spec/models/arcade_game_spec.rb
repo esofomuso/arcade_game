@@ -1,3 +1,4 @@
+require 'spec_helper'
 # == Schema Information
 #
 # Table name: arcade_games
@@ -10,8 +11,6 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
-
-pending "working specs" do
 describe ArcadeGame do
   describe "creation" do
     let(:creation_attributes) {{
@@ -38,5 +37,4 @@ describe ArcadeGame do
       end
     end
   end
-end
 end

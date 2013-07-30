@@ -1,4 +1,5 @@
-pending "working specs" do
+require 'spec_helper'
+
 describe ArcadeGamesController do
   
   let(:params) { HashWithIndifferentAccess.new }
@@ -45,7 +46,34 @@ describe ArcadeGamesController do
     end  
   end
   describe "actions" do
+    describe "index" do
+      before do
+        get :index, params
+      end
 
+      it "is a success" do
+        expect(response).to be_success
+      end
+
+      it "renders the index template" do
+        expect(response).to render_template :index
+      end
+    end
+
+    describe "show" do
+      before do
+        params[:id] = game1.id
+        controller.stub :arcade_game => game1
+        get :show, params
+      end
+      
+      it "is a success" do
+        expect(response).to be_success
+      end
+      
+      it "renders the show template" do
+        expect(response).to render_template :show
+      end
+    end
   end
-end
 end

@@ -12,4 +12,7 @@ class GameLike < ActiveRecord::Base
   attr_accessible :clicker_ip, :game_id
   
   belongs_to :game, :class_name => 'ArcadeGame'
+  
+  validates :game, :presence => true
+  
 end
