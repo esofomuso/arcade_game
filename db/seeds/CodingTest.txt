@@ -1,0 +1,36 @@
+This coding challenge will test your ability to create a small web application.  
+It will test your ability to create a database, import data into it, access it the data, display the data on the screen with html, make ajax calls using javascript and json and write back to the database.  
+You can use any documentation, google, stack overflow and any IDE.  
+Use Ruby on Rails and either mysql, postgres or sqlite.   
+You can use third party libraries such as activerecord, jquery, etc. as long as you write the application yourself (don’t download a script.)  
+
+
+The application is an small web-based video game directory for class arcade games.  
+You will need to import a list of video games from the attached CSV file into the database as a table to use throughout the application. 
+You will need to create the table and import the data into it.  
+This should be in a script somewhere written in sql, ruby, etc. that can be reused in case the import needs to be reimported.  
+
+
+There will be a tabular data grid that should show the games in the directory.  
+The grid should show the name and publisher of the game,  
+There should be an “is_active” flag in the database table and the grid should only show show the first 25 active games. 
+The sort order for the grid should be the video game’s year of publication.  
+
+
+When the video game name is clicked it should open a pop up using a span or div with a library such as jquery dialog.  
+It should not take the user to a new page or tab nor use window.open.  
+The dialog should show further details of the game including all the information above as well as the photo, year, is active flag and notes. 
+ To get this data and display it you should make an ajax call using json as the data transport to the server to get the detailed information and display it in the dialog.   
+
+
+The photo doesn’t have to be resized or thumbnailed on the server.  
+It can be resized in the browser to fit in the dialog.  You should have a place to store the file and a means to associate it with the records in the database.  
+It can be stored on the file system or in the database or you can use a third party library or service to manage this. 
+ Or you can do something very simple and store the filename in the database or use a naming convention to find the right photo.         
+ The photos have been provided.  Most games are missing photos, so just leave the photo blank for the ones that don’t have them. 
+
+
+Finally there should be a link in the dialog that says “Like” similar to how facebook works. 
+ When clicked, this should make an ajax call to the server (again passing data using json for which game was clicked), which should then add the “like” to a separate table.  
+ The table should store the date and time of the like, the clicker’s IP address and a foreign key to the game table.  
+ The dialog should always show the number of likes the game has had so you will need to find some way to retrieve the count for the clicked video game in the dialog.

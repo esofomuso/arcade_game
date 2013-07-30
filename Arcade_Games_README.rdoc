@@ -1,0 +1,18 @@
+== Arcade Games
+
+After the unpacking the application folder, cd into the directory.
+
+if rvm is installed a gempath will be created. 
+
+Run bundle install to get all gems installed.
+
+rake db:migrate 
+
+rake db:seed to load the arcade games into the database.
+
+start the project using 
+
+rails s 
+
+In the browser go to http://localhost:3000/arcade_games
+

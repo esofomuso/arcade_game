@@ -1,0 +1,158 @@
+body {
+  background-color: #dff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000;
+  &:visited {
+    color: #666; }
+  &:hover {
+    color: #fff;
+    background-color: #000; } }
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px; } }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }
+#header {
+      width: 100%;
+      height: 40px;
+      padding: 7px;
+      border-bottom: 1px solid gray;
+      background: url(images/banner.jpg) no-repeat bottom right;
+      margin-bottom: 2px;
+      }
+#navigation {
+      clear: both;
+      float: left;
+      width: 30%;
+      min-height: 255px;
+      padding: 12px;
+      margin-bottom: 2px;
+      }
+#main {
+      float: left;
+      width: 50%;
+      padding: 7px;
+      margin-bottom: 2px;
+      left:500px;
+      }
+      
+.ui-widget-header {
+background-color: #0B8181;
+border: 1px solid #0B8181;
+color: #FFFFFF;
+font-weight: bold;
+}
+
+.ui-widget-content {
+background-color: white;
+border: 1px solid #DDDDDD;
+color: #333333;
+}
+
+.ui-dialog {
+overflow: hidden;
+padding: 0.2em;
+}
+
+.ui-dialog-content {
+background: none repeat scroll 0 0 transparent;
+border: 0 none;
+overflow: auto;
+padding: 0.5em 1em;
+position: relative;
+height: auto;
+min-height: 111.4px;
+width: auto;
+}
+
+.ui-dialog-title {
+float: left;
+margin: 0.1em 16px 0.1em 0;
+}
+
+.ui-dialog-titlebar {
+padding: 0.4em 1em;
+position: relative;
+height: 1em;
+}
+
+.ui-dialog-titlebar-close span {
+display: block;
+margin: 1px;
+}
+
+.ui-dialog-titlebar-close {
+height: 18px;
+margin: -10px 0 0;
+padding: 1px;
+position: absolute;
+right: 0.3em;
+top: 50%;
+width: 33px;
+}
+
+.ui-icon {
+overflow: hidden;
+text-indent: -99999px;
+width: 16px;
+
+}
+ 
+a:link.blueButton, 
+a:visited.blueButton,
+a:visited.blueButton {
+	background: transparent url(/assets/btn_blue.png) repeat-x left top;
+	color: #fff;
+	display: block;
+	float: left;
+	border: 1px solid #0C6589;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	padding: 6px 8px 3px 8px;
+	margin: 0 0 0 10px;
+	text-align: center;
+	text-decoration: none;
+	text-transform:uppercase;
+}

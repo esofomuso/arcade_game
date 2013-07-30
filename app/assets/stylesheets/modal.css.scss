@@ -1,0 +1,21 @@
+
+/*-----------Sitewide Modal Dialog--------------*/
+$loader_large: '/assets/ajax-loader.gif';
+#modal {
+
+  display: none;
+  padding: 0;
+  margin: 0;
+
+  .loader {
+    display: none;
+	  background: transparent url($loader_large) no-repeat center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0
+  }
+
+}
+

@@ -1,0 +1,13 @@
+%table
+  %tr
+    %th Name
+    %th Manufacturer
+
+  - arcade_games.each do |arcade_game|
+    %tr
+      %td= link_to_modal_ajax arcade_game.name.dehumanize, arcade_game, :class => "game_#{arcade_game.id}", :onClick => "openDialog('modal#{arcade_game.id}', 'game_#{arcade_game.id}');"
+      %div{:class => 'modal', :id=>"modal#{arcade_game.id}", :title=> arcade_game.name, :style=>"display:none;border1111:1px solid red; width:640px;"}
+        = render :template => 'arcade_games/show', :locals => {:arcade_game => arcade_game, :arcade_game_likes => arcade_game_likes}  
+        
+      %td= arcade_game.manufacturer
+  

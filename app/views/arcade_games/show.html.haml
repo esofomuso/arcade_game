@@ -1,0 +1,24 @@
+%p#notice= notice
+- unless arcade_game.image.blank?
+  = image_tag arcade_game.image, :size => "150x150"
+%p
+  %b Name:
+  = arcade_game.name
+%p
+  %b Year:
+  = arcade_game.year
+%p
+  %b Manufacturer:
+  = arcade_game.manufacturer
+%p
+  %b Notes:
+  = arcade_game.notes
+%p
+  %b Is active:
+  = arcade_game.is_active
+%p
+  %b Likes:
+  %div{:class => 'game_likes'}
+    = arcade_game.game_likes.size
+
+= link_to_modal_ajax 'Like', "add_like/#{arcade_game.id}", :class => 'blueButton submit'
