@@ -16,3 +16,9 @@ rails s
 
 In the browser go to http://localhost:3000/arcade_games
 
+using rspec to test:
+
+rails generate rspec:install
+rails generate rspec:model ArcadeGame
+rails generate rspec:model GameLike
+rails generate rspec:controller ArcadeGames
